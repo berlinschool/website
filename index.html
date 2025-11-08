@@ -5,111 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Berliner Schule für Psychoanalyse</title>
   <style>
-    :root{
-      --bg:#ffffff;   /* reines Weiß */
-      --ink:#0b0c0d;  /* schwarze Type */
-      --accent:#0b0c0d; /* Akzentfarbe */
-    }
+    :root{ --bg:#ffffff; --ink:#0b0c0d; --accent:#0b0c0d; }
     *{box-sizing:border-box}
     html,body{height:100%}
     html{scroll-behavior:smooth}
     body{
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family:Univers,"Helvetica Neue",Helvetica,Arial,sans-serif;
-      line-height:1.25;
+      margin:0;background:var(--bg);color:var(--ink);
+      font-family:Univers,"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.25;
     }
+    /* Language switch */
+    .lang{position:fixed;top:1rem;left:1rem;z-index:10;font-size:clamp(10px,1.6vw,12px);text-transform:uppercase;letter-spacing:.08em}
+    .lang a{color:var(--ink);text-decoration:none;margin-right:.4rem}
+    .lang .current{opacity:.5;pointer-events:none}
+
     .side-url{
-      position:fixed;right:.5rem;top:0;bottom:0;
-      writing-mode:vertical-rl;text-orientation:mixed;
-      display:flex;align-items:center;
-      color:rgba(11,12,13,.6);
-      text-decoration:none;
-      letter-spacing:.15em;font-size:clamp(12px,1.6vw,16px);
-      transition:opacity .2s ease;
+      position:fixed;right:.5rem;top:0;bottom:0;writing-mode:vertical-rl;text-orientation:mixed;
+      display:flex;align-items:center;color:rgba(11,12,13,.6);text-decoration:none;letter-spacing:.15em;
+      font-size:clamp(12px,1.6vw,16px);transition:opacity .2s ease;
     }
     .side-url:hover{opacity:.9}
 
     main{
       display:flex;flex-direction:column;justify-content:center;
-      min-height:70vh;padding:6vh clamp(1rem,4vw,4rem);
-      max-width:1000px;margin:0 auto;
+      min-height:70vh;padding:6vh clamp(1rem,4vw,4rem);max-width:1000px;margin:0 auto;
     }
     h1{
       text-transform:uppercase;font-weight:800;letter-spacing:.06em;
-      font-size:clamp(28px,8vw,80px);line-height:1.05;max-width:24ch;
-      margin:0;
-      margin-bottom:80vh; /* großer Abstand zwischen Titel und Buttons */
+      font-size:clamp(28px,8vw,80px);line-height:1.05;max-width:24ch;margin:0;margin-bottom:80vh;
     }
     h1 span{display:block}
 
     .cta{
-      display:grid;
-      grid-template-columns:repeat(2,auto);
-      gap:.6rem 1rem;
-      justify-content:flex-start;
-      margin-top:1rem;
-      margin-bottom:45rem;
+      display:grid;grid-template-columns:repeat(2,auto);gap:.6rem 1rem;justify-content:flex-start;
+      margin-top:1rem;margin-bottom:11rem;
     }
     .button{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      border:1.5px solid var(--accent);
-      padding:.3rem .9rem;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-weight:700;
-      font-size:clamp(10px,1.5vw,12px);
-      transition:filter .2s ease, background .2s ease, color .2s ease;
-      border-radius:3px;
-      width:130px;
-      height:35px;
+      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1.5px solid var(--accent);
+      padding:.3rem .9rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;font-size:clamp(10px,1.5vw,12px);
+      transition:filter .2s ease, background .2s ease, color .2s ease;border-radius:3px;width:130px;height:35px;
     }
-    .filled{background:var(--accent);color:var(--bg);}
-    .outline{background:transparent;color:var(--accent);}
+    .filled{background:var(--accent);color:var(--bg)}
+    .outline{background:transparent;color:var(--accent)}
     .button:hover{filter:brightness(1.08)}
 
-    section, footer{
-      max-width:1000px;
-      margin:0 auto;
-      padding:3rem clamp(1rem,4vw,4rem);
-    }
-    h2{
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.06em;
-      margin:0;
-      font-size:clamp(18px,4vw,28px);
-    }
-    p{
-      margin-top:0.1rem;
-      color:var(--ink);
-      font-size:clamp(16px,3vw,20px);
-      line-height:1.35;
-      white-space:pre-line;
-    }
-    a{color:var(--ink);text-decoration:underline;}
+    section, footer{max-width:1000px;margin:0 auto;padding:3rem clamp(1rem,4vw,4rem)}
+    h2{font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:0;font-size:clamp(18px,4vw,28px)}
+    p{margin-top:.1rem;color:var(--ink);font-size:clamp(16px,3vw,20px);line-height:1.35;white-space:pre-line}
+    a{color:var(--ink);text-decoration:underline}
     .to-top{
-      position:fixed;
-      bottom:1.5rem;
-      right:1.5rem;
-      color:rgba(11,12,13,.6);
-      text-decoration:none;
-      font-size:clamp(13px,1.8vw,15px);
-      transition:color .2s ease;
+      position:fixed;bottom:1.5rem;right:1.5rem;color:rgba(11,12,13,.6);text-decoration:none;
+      font-size:clamp(13px,1.8vw,15px);transition:color .2s ease;
     }
     .to-top:hover{color:var(--ink)}
     @media(max-width:600px){
-      .cta{grid-template-columns:1fr;justify-items:flex-start;}
-      .button{width:130px;}
-      h1{margin-bottom:70vh;} /* etwas kleinerer Abstand auf Mobil */
+      .cta{grid-template-columns:1fr;justify-items:flex-start}
+      .button{width:130px}
+      h1{margin-bottom:70vh}
     }
   </style>
 </head>
 <body>
+  <!-- Language switch -->
+  <nav class="lang"> <span class="current">DE</span> / <a href="/en/">EN</a> / <a href="/fr/">FR</a></nav>
+
   <a class="side-url" href="https://www.berliner-schule.org">www.berliner-schule.org</a>
 
   <main id="top">
@@ -137,7 +95,7 @@ Weitere Informationen folgen.</p>
   <section id="aktuelles">
     <h2>Aktuelles</h2>
     <p>Seminar „The ‘Structure’ of Psychoanalysis“ ab 17. Oktober 2025.
-Mehr unter: <a href="http://www.structure-of-psychoanalysis.online" target="_blank">structure-of-psychoanalysis.online</a></p>
+Mehr unter: <a href="http://www.structure-of-psychoanalysis.online" target="_blank" rel="noopener">www.structure-of-psychoanalysis.online</a></p>
   </section>
 
   <footer id="adresse">
@@ -149,4 +107,3 @@ Geisbergstraße 29</p>
   <a href="#top" class="to-top">Nach oben ↑</a>
 </body>
 </html>
-
