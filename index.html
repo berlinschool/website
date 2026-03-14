@@ -17,14 +17,14 @@
     .lang{position:fixed;top:1rem;left:1rem;z-index:10;font-size:clamp(10px,1.6vw,12px);text-transform:uppercase;letter-spacing:.08em}
     .lang a{color:var(--ink);text-decoration:none;margin-right:.4rem}
     .lang .current{opacity:.5;pointer-events:none}
- 
+
     .side-url{
       position:fixed;right:.5rem;top:0;bottom:0;writing-mode:vertical-rl;text-orientation:mixed;
       display:flex;align-items:center;color:rgba(11,12,13,.6);text-decoration:none;letter-spacing:.15em;
       font-size:clamp(12px,1.6vw,16px);transition:opacity .2s ease;
     }
     .side-url:hover{opacity:.9}
- 
+
     main{
       display:flex;flex-direction:column;justify-content:center;
       min-height:70vh;padding:6vh clamp(1rem,4vw,4rem);max-width:1000px;margin:0 auto;
@@ -34,7 +34,7 @@
       font-size:clamp(28px,8vw,80px);line-height:1.05;max-width:24ch;margin:0;margin-bottom:80vh;
     }
     h1 span{display:block}
- 
+
     .cta{
       display:grid;grid-template-columns:repeat(2,auto);gap:.6rem 1rem;justify-content:flex-start;
       margin-top:1rem;margin-bottom:11rem;
@@ -47,7 +47,7 @@
     .filled{background:var(--accent);color:var(--bg)}
     .outline{background:transparent;color:var(--accent)}
     .button:hover{filter:brightness(1.08)}
- 
+
     section, footer{max-width:1000px;margin:0 auto;padding:3rem clamp(1rem,4vw,4rem)}
     h2{font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:0;font-size:clamp(18px,4vw,28px)}
     p{margin-top:.1rem;color:var(--ink);font-size:clamp(16px,3vw,20px);line-height:1.35;white-space:pre-line}
@@ -67,9 +67,9 @@
 <body>
   <!-- Language switch -->
   <nav class="lang"><span class="current">DE</span> / <a href="en/">EN</a> / <a href="fr/">FR</a></nav>
- 
+
   <a class="side-url" href="https://www.berliner-schule.org">www.berliner-schule.org</a>
- 
+
   <main id="top">
     <h1>
       <span>Berliner</span>
@@ -86,25 +86,36 @@
       <a class="button outline" href="#aktuelles">Aktuelles</a>
       <a class="button filled" href="#adresse">Adresse</a>
       <a class="button outline" href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9dbdccbd5d0d7dccb94cadad1ccd5dc97d6cbde">Kontakt</a>
+      <a class="button filled" href="#newsletter">Brief</a>
     </div>
   </main>
- 
+
   <section id="info">
     <h2>Info</h2>
     <p>Die Berliner Schule für Psychoanalyse nach Freud und Lacan ist eine Einrichtung im Entstehen.</p>
     <p>Ein virtuelles Treffen zur Einrichtung der Schule findet am 14. März 2026 um 16h30 MEZ statt; es steht allen Interessierten offen. Der Zugang zum Treffen findet sich unter <a href="https://us06web.zoom.us/j/6063394270">https://us06web.zoom.us/j/6063394270</a>. Der Zugangscode lautet: 7ENsNE.</p>
   </section>
- 
+
   <section id="aktuelles">
     <h2>Aktuelles</h2>
     <p><a href="schulbrief%20eins%20dt%20060326.pdf" target="_blank" rel="noopener">Mitteilungsbrief Nr. 1 (März 2026) ↓</a></p>
     <p>Das Seminar „The 'Structure' of Psychoanalysis" (Marcus Coelen) fand von Oktober 2025 bis März 2026 statt. Informationen und Materialien zum Seminar finden sich unter: <a href="http://www.structure-of-psychoanalysis.online" target="_blank" rel="noopener">www.structure-of-psychoanalysis.online</a></p>
   </section>
- 
+
+  <section id="newsletter">
+    <h2>Brief</h2>
+    <p>Hier anmelden, um den Mitteilungsbrief der Berliner Schule zu erhalten.</p>
+    <form action="https://berliner-schule.us16.list-manage.com/subscribe/post?u=b32b9ab9cc4b719132b5f15a3&amp;id=db15bc8d04&amp;f_id=0065c2e1f0" method="post" target="_blank" style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;">
+      <input type="email" name="EMAIL" required placeholder="E-Mail-Adresse" style="font-family:inherit;font-size:clamp(14px,2vw,16px);border:1.5px solid var(--ink);padding:.3rem .7rem;background:transparent;color:var(--ink);outline:none;height:35px;">
+      <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_b32b9ab9cc4b719132b5f15a3_db15bc8d04" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:inherit;font-size:clamp(10px,1.5vw,12px);font-weight:700;text-transform:uppercase;letter-spacing:.08em;border:1.5px solid var(--accent);background:var(--accent);color:var(--bg);padding:.3rem .9rem;cursor:pointer;height:35px;">Anmelden</button>
+    </form>
+  </section>
+
   <footer id="adresse">
     <h2>PSYBI</h2>
     <p>Schöneberg
 Geisbergstraße 29</p>
   </footer>
- 
+
   <a href="#top" cl
