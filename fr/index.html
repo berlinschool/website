@@ -14,7 +14,7 @@
     }
     @font-face{
       font-family:"Univers";
-      src:url('../fonts/univers-boldcondensed.woff') format('woff');
+      src:url('../fonts/univers-boldcondensed.woff2') format('woff2'),url('../fonts/univers-boldcondensed.woff') format('woff');
       font-weight:700;
       font-style:normal;
       font-display:swap;
@@ -43,7 +43,8 @@
       min-height:70vh;padding:6vh clamp(1rem,4vw,4rem);max-width:1000px;margin:0 auto;
     }
     h1{
-      font-family:"Univers";text-transform:uppercase;font-weight:700;letter-spacing:.06em;
+      font-family:"Univers",sans-serif;text-transform:uppercase;font-weight:800;letter-spacing:.06em;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
       font-size:clamp(28px,8vw,80px);line-height:1.05;max-width:24ch;margin:0;margin-bottom:80vh;
     }
     h1 span{display:block}
