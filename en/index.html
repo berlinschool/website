@@ -1,24 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Berlin School for Psychoanalysis</title>
   <style>
-    @font-face{
-      font-family:"Univers";
-      src:url('../fonts/Univers.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-      font-display:block;
-    }
-    @font-face{
-      font-family:"Univers";
-      src:url('../fonts/Univers-Bold.woff2') format('woff2');
-      font-weight:700;
-      font-style:normal;
-      font-display:block;
-    }
     :root{ --bg:#ffffff; --ink:#0b0c0d; --accent:#0b0c0d; }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -30,25 +17,21 @@
     .lang{position:fixed;top:1rem;left:1rem;z-index:10;font-size:clamp(10px,1.6vw,12px);text-transform:uppercase;letter-spacing:.08em}
     .lang a{color:var(--ink);text-decoration:none;margin-right:.4rem}
     .lang .current{opacity:.5;pointer-events:none}
-
     .side-url{
       position:fixed;right:.5rem;top:0;bottom:0;writing-mode:vertical-rl;text-orientation:mixed;
       display:flex;align-items:center;color:rgba(11,12,13,.6);text-decoration:none;letter-spacing:.15em;
       font-size:clamp(12px,1.6vw,16px);transition:opacity .2s ease;
     }
     .side-url:hover{opacity:.9}
-
     main{
       display:flex;flex-direction:column;justify-content:center;
       min-height:70vh;padding:6vh clamp(1rem,4vw,4rem);max-width:1000px;margin:0 auto;
     }
     h1{
-      font-family:Univers,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.06em;
-      font-synthesis:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+      text-transform:uppercase;font-weight:700;letter-spacing:.06em;
       font-size:clamp(28px,8vw,80px);line-height:1.05;max-width:24ch;margin:0;margin-bottom:80vh;
     }
     h1 span{display:block}
-
     .cta{
       display:grid;grid-template-columns:repeat(2,auto);gap:.6rem 1rem;justify-content:flex-start;
       margin-top:1rem;margin-bottom:11rem;
@@ -61,7 +44,6 @@
     .filled{background:var(--accent);color:var(--bg)}
     .outline{background:transparent;color:var(--accent)}
     .button:hover{filter:brightness(1.08)}
-
     section, footer{max-width:1000px;margin:0 auto;padding:3rem clamp(1rem,4vw,4rem)}
     h2{font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:0;font-size:clamp(18px,4vw,28px)}
     p{margin-top:1rem;color:var(--ink);font-size:clamp(16px,3vw,20px);line-height:1.35;white-space:pre-line}
@@ -80,14 +62,12 @@
 </head>
 <body>
   <nav class="lang"><a href="../">DE</a> / <span class="current">EN</span> / <a href="../fr/">FR</a></nav>
-
   <a class="side-url" href="https://www.berliner-schule.org">www.berliner-schule.org</a>
-
   <main id="top">
     <h1>
       <span>Berlin</span>
       <span>School</span>
-      <span>For</span>
+      <span>for</span>
       <span>Psychoanalysis</span>
       <span>after</span>
       <span>Freud</span>
@@ -100,9 +80,10 @@
       <a class="button filled" href="#discontents">Discontents</a>
       <a class="button outline" href="#meetings">Meetings</a>
       <a class="button filled" href="#seminars">Seminars</a>
-      <a class="button outline" href="#newsletter">Letter</a>
-      <a class="button filled" href="#address">Address</a>
-      <a class="button outline" href="/cdn-cgi/l/email-protection#85ecebe3eac5e7e0f7e9ecebe0f7a8f6e6edf0e9e0abeaf7e2">Contact</a>
+      <a class="button outline" href="#reading">Reading</a>
+      <a class="button filled" href="#newsletter">Letter</a>
+      <a class="button outline" href="#address">Address</a>
+      <a class="button filled" href="mailto:info@berliner-schule.org">Contact</a>
     </div>
   </main>
 
@@ -114,20 +95,21 @@
 
   <section id="news">
     <h2>News</h2>
+    <p><a href="../brief-lettre-letter-2-2026.pdf" target="_blank" rel="noopener">Newsletter No. 2 (April 2026) ↓</a></p>
     <p><a href="../school-news-march-2026.pdf" target="_blank" rel="noopener">Latest News March 16, 2026 ↓</a></p>
     <p><a href="../letter-school-1.pdf" target="_blank" rel="noopener">Newsletter No. 1 (March 2026) ↓</a></p>
   </section>
 
   <section id="discontents">
     <h2>Discontents</h2>
-    <p>An open reading group on Freud's "Civilization and Its Discontents" meets biweekly wednesdays at Geisbergstraße 29 in Berlin-Schöneberg (PsyBi). The next meeting will be on April 15th (and then on April 29th and May 13th etc,).</p>
-    <p>The conversation will be mostly in German, but contributions are possible in French or English as well. </p>
-    <p>An access to the meetions via Zoom will be provided: <a href="https://us02web.zoom.us/j/81354204226?pwd=BBy4Owqtac2rcgznXxjbjBIywQkqYO.1">https://us02web.zoom.us/j/81354204226</a>. Meeting ID: 81354204226. Passcode: 585358.</p>
+    <p>An open reading group on Freud's Civilization and Its Discontents meets every two weeks on Wednesdays at Geisbergstraße 29 in Berlin-Schöneberg (PsyBi). The next meeting is planned for April 29, with further sessions on May 13, etc.</p>
+    <p>The discussion takes place primarily in German; contributions in French and English are welcome.</p>
+    <p>Access via Zoom: <a href="https://us02web.zoom.us/j/81354204226?pwd=BBy4Owqtac2rcgznXxjbjBIywQkqYO.1">https://us02web.zoom.us/j/81354204226</a>. Meeting ID: 81354204226. Passcode: 585358.</p>
   </section>
 
   <section id="meetings">
     <h2>Meetings</h2>
-    <p>The next monthly school meeting will take place on April 11, 2026, at 4:30 p.m. CET via Zoom. These brief meetings are open to anyone interested and allow to inform about activities linked to the School.</p>
+    <p>The next monthly school meeting will take place on May 30, 2026, at 4:30 p.m. CET via Zoom. These brief meetings are open to anyone interested and serve as a forum for exchanging ideas about activities connected to the school.</p>
     <p>Access: <a href="https://us06web.zoom.us/j/83967851805?pwd=B8EaG7t7nuaKh1aeINYAYO2RKxPIhc.1">https://us06web.zoom.us/j/83967851805</a>. Meeting ID: 839 6785 1805. Passcode: 096181.</p>
   </section>
 
@@ -137,9 +119,15 @@
     <p>This fall, a seminar on "Reality" by Mai Wegener will begin. More information will follow.</p>
   </section>
 
+  <section id="reading">
+    <h2>Reading</h2>
+    <p>A reading group "Filiations" in English begins on May 6, meeting monthly at 7:00 p.m. CET via Zoom. It is led by Jessica Aimufua and Hoora Sarajan.</p>
+    <p>More information will follow.</p>
+  </section>
+
   <section id="newsletter">
     <h2>Letter</h2>
-    <p>Please sign up here if you would like to receive the Berlin School newsletter.</p>
+    <p>Please sign up here to receive the Berlin School newsletter.</p>
     <form action="https://berliner-schule.us16.list-manage.com/subscribe/post?u=b32b9ab9cc4b719132b5f15a3&amp;id=db15bc8d04&amp;f_id=0065c2e1f0" method="post" target="_blank" style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;">
       <input type="email" name="EMAIL" required placeholder="Email address" style="font-family:inherit;font-size:clamp(14px,2vw,16px);border:1.5px solid var(--ink);padding:.3rem .7rem;background:transparent;color:var(--ink);outline:none;height:35px;">
       <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_b32b9ab9cc4b719132b5f15a3_db15bc8d04" tabindex="-1" value=""></div>
@@ -153,4 +141,7 @@
 Berlin-Schöneberg</p>
   </footer>
 
-  <a href="#top" cla
+<a href="#top" class="to-top">Back to top ↑</a>
+
+</body>
+</html>
